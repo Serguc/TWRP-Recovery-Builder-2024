@@ -16,7 +16,7 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree' 
         required: true
-        default: 'https://github.com/kinguser981/cap_sprout_twrp'
+        default: 'https://github.com/Serguc/device_Blackview_SHARK8.git'
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch' 
         required: true
@@ -120,8 +120,8 @@ jobs:
       run: |
         mkdir workspace
         cd workspace
-        git config --global user.name "Samuel Kendall"
-        git config --global user.email "kinguser981@gmail.com"
+        git config --global user.name "Serguc"
+        git config --global user.email "Haritonov014@gmail.com"
         repo init --depth=1 -u ${{ steps.manifest.outputs.value }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
   
     - name: Repo Sync
